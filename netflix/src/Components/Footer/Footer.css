@@ -1,0 +1,35 @@
+.innerFooterConatainer {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  padding: 1rem;
+}
+.iconsContainer {
+  display: flex;
+  width: 15%;
+  align-items: center;
+  justify-content: space-between;
+}
+.footerData {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.serviceCode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.service {
+  border: 1px solid white;
+  width: 10%;
+  margin: 0.4rem;
+}
