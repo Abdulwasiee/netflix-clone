@@ -4,13 +4,13 @@
 }
 .banner_content {
   margin-top: 15%;
-  margin-left: 5%;
+  margin-left: 2%;
   color: white;
-  width: 50%;
+  width: 30%;
 }
 .banner_buttons {
   padding: 1rem 0;
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;

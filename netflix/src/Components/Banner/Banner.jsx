@@ -9,7 +9,7 @@ function Banner() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const request = await axios.get(movieUrls.urls.crime);
+        const request = await axios.get(movieUrls.urls.scienceFiction);
         setMovie(
           request.data.results[
             Math.floor(Math.random() * request.data.results.length)
