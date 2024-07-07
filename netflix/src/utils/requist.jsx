@@ -1,4 +1,4 @@
-const apiKey = process.env.REACT_APP_apiKEY;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 const movieUrls = {
   baseUrl: "https://api.themoviedb.org/3",
@@ -20,12 +20,12 @@ const movieUrls = {
     horror: `/discover/movie?api_key=${apiKey}&with_genres=27`,
     music: `/discover/movie?api_key=${apiKey}&with_genres=10402`,
     mystery: `/discover/movie?api_key=${apiKey}&with_genres=9648`,
-    romance: `/discover/movie?api_key=${apiKey}&with_genres=10749`,
-    scienceFiction: `/discover/movie?api_key=${apiKey}&with_genres=878`,
-    tvMovie: `/discover/movie?api_key=${apiKey}&with_genres=10770`,
-    thriller: `/discover/movie?api_key=${apiKey}&with_genres=53`,
-    war: `/discover/movie?api_key=${apiKey}&with_genres=10752`,
-    western: `/discover/movie?api_key=${apiKey}&with_genres=37`,
+    romance: `/discover/movie?api_key=${apiKey}&with_genres=10749}`,
+    scienceFiction: `/discover/movie?api_key=${apiKey}&with_genres=878}`,
+    tvMovie: `/discover/movie?api_key=${apiKey}&with_genres=10770}`,
+    thriller: `/discover/movie?api_key=${apiKey}&with_genres=53}`,
+    war: `/discover/movie?api_key=${apiKey}&with_genres=10752}`,
+    western: `/discover/movie?api_key=${apiKey}&with_genres=37}`,
   },
 };
 
