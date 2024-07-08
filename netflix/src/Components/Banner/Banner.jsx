@@ -21,7 +21,7 @@ function Banner() {
     };
     fetchData();
   }, []);
-
+ 
   return (
     <div
       className="banner"
