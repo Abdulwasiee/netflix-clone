@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import $ from "jquery"; // Import jQuery
+import $ from "jquery"; 
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -17,7 +17,6 @@ function Header() {
       }
     });
 
-    // Clean up the scroll event listener
     return () => {
       $(window).off("scroll");
     };

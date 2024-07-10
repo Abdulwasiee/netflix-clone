@@ -4,13 +4,13 @@
   top: 0;
   height: 10vh;
   z-index: 1;
-  background-color: black; /* Initial solid background color */
+  background-color: black;
   color: white;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  transition: background-color 1s ease;
 }
 
 .transparentBg {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent background color */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .innerHeadContainer {
