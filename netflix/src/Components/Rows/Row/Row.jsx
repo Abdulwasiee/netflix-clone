@@ -8,11 +8,12 @@ function Row(props) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
   const base_url = "https://image.tmdb.org/t/p/original/";
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
         const request = await axios.get(props.fetchUrl);
+        console.log(request);
         setMovies(request.data.results);
       } catch (err) {
         console.error("Error fetching movie data:", err);
