@@ -21,28 +21,28 @@ function Footer() {
             </li>
           </ul>
           <div className="footerData">
-            <ul className="container">
+            <ul>
               <li>Audio Descrition</li>
               <li>Investor Relation</li>
               <li> Lega Notice</li>
             </ul>
-            <ul className="container">
+            <ul>
               <li>Help Center</li>
               <li> Jobs</li>
               <li> Cookie Preference</li>
             </ul>
-            <ul className="container">
+            <ul>
               <li>Gift Card</li>
               <li> Terms Of Use</li>
               <li> Corporate Information</li>
             </ul>
-            <ul className="conatiner">
+            <ul>
               <li>Media Center</li>
               <li>Privacy</li>
               <li> Contact Us</li>
             </ul>
           </div>
-          <ul className="serviceCode">
+          <ul>
             <li className="service">service code</li>
             <li>&#169; 1997-2024 Netflix,Inc.</li>
           </ul>

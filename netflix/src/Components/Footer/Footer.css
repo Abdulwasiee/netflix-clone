@@ -18,10 +18,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-}
+
 .serviceCode {
   display: flex;
   flex-direction: column;
