@@ -20,13 +20,10 @@
 }
 
 .serviceCode {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   margin-top: 2rem;
 }
 .service {
   border: 1px solid white;
   width: 10%;
-  margin: 0.4rem;
+  margin:0.4rem 0;
 }

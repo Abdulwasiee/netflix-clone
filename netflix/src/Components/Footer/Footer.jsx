@@ -42,7 +42,7 @@ function Footer() {
               <li> Contact Us</li>
             </ul>
           </div>
-          <ul>
+          <ul className="serviceCode ">
             <li className="service">service code</li>
             <li>&#169; 1997-2024 Netflix,Inc.</li>
           </ul>
