@@ -27,13 +27,14 @@ function Row(props) {
     } else {
       movieTrailer(movie?.title || movie?.name || movie?.original_name || "")
         .then((url) => {
+          console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
+          console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         })
-        .catch((error) => console.error("Error finding trailer:", error));
+        .catch((error) => consaole.error("Error finding trailer:", error));
     }
   };
-
   const opts = {
     height: "390",
     width: "100%",

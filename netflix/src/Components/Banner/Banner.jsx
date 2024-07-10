@@ -9,10 +9,10 @@ function Banner() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const request = await axios.get(movieUrls.urls.scienceFiction);
+        const response = await axios.get(movieUrls.urls.crime);
         setMovie(
-          request.data.results[
-            Math.floor(Math.random() * request.data.results.length)
+          response.data.results[
+            Math.floor(Math.random() * response.data.results.length)
           ]
         );
       } catch (err) {
@@ -21,13 +21,13 @@ function Banner() {
     };
     fetchData();
   }, []);
- 
+
   return (
     <div
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`, // Fixed URL syntax
+        backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -39,12 +39,12 @@ function Banner() {
           <button className="myList">My List</button>
         </div>
         <p className="banner_description">
-          {movie?.overview?.substring(0, 150)}
+          {movie?.overview?.substring(0, 150)}r
           {movie?.overview?.length > 150 ? "..." : ""}
         </p>
       </div>
     </div>
-  );
+  )
 }
 
 export default Banner;

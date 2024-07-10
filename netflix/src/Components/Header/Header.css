@@ -4,8 +4,13 @@
   top: 0;
   height: 10vh;
   z-index: 1;
-  background-color: black;
+  background-color: black; /* Initial solid background color */
   color: white;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.transparentBg {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background color */
 }
 
 .innerHeadContainer {
@@ -22,6 +27,7 @@
   align-items: center;
   width: 40%;
 }
+
 .headerLogo img {
   width: 80px;
 }
