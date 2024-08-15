@@ -1,4 +1,4 @@
-/* RowList.css */
+/* Row.css */
 
 .row {
   margin-left: 20px;
@@ -45,4 +45,47 @@
 
 .row_posterLarge:hover {
   transform: scale(1.09);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .row h1 {
+    font-size: 1.2rem;
+  }
+
+  .row_poster {
+    max-height: 80px;
+  }
+
+  .row_posterLarge {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row h1 {
+    font-size: 1rem;
+  }
+
+  .row_poster {
+    max-height: 70px;
+  }
+
+  .row_posterLarge {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row h1 {
+    font-size: 0.8rem;
+  }
+
+  .row_poster {
+    max-height: 50px;
+  }
+
+  .row_posterLarge {
+    max-height: 150px;
+  }
 }

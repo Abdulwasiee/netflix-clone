@@ -1,6 +1,6 @@
 .outerHeadContainer {
   width: 100%;
-  position:sticky;
+  position: sticky;
   top: 0;
   height: 10vh;
   z-index: 1;
@@ -19,17 +19,18 @@
   display: flex;
   justify-content: space-between;
   padding: 1.2rem;
+  position: relative;
+}
+
+.headerLogo img {
+  width: 80px;
 }
 
 .leftMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
-}
-
-.headerLogo img {
-  width: 80px;
+  width: 30%;
 }
 
 .rightMenu {
@@ -42,4 +43,45 @@
 .leftMenu li,
 .rightMenu li {
   cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  z-index: 2;
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .leftMenu {
+    display: none;
+  }
+
+  .rightMenu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
 }
