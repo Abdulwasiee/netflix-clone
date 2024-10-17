@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
@@ -6,9 +6,12 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close"; // Import CloseIcon
 import netflixLogo from "../../assets/image/netflixLogo.jpg";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu toggle
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -19,7 +22,8 @@ function Header() {
         $(".leftMenu").show();
         $(".rightMenu").show();
         $(".menu-toggle").hide();
-        $(".dropdown-menu").removeClass("show"); 
+        $(".dropdown-menu").removeClass("show");
+        setIsMenuOpen(false); // Reset menu state when resizing to larger screens
       }
     };
 
@@ -32,11 +36,6 @@ function Header() {
       }
     });
 
-    // Handle menu toggle
-    $(".menu-toggle").on("click", function () {
-      $(".dropdown-menu").toggleClass("show");
-    });
-
     // Handle window resize
     $(window).on("resize", handleResize);
 
@@ -47,9 +46,14 @@ function Header() {
       // Cleanup event listeners on component unmount
       $(window).off("scroll");
       $(window).off("resize", handleResize);
-      $(".menu-toggle").off("click");
     };
   }, []);
+
+  // Toggle menu and icon
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+    $(".dropdown-menu").toggleClass("show");
+  };
 
   return (
     <div className="outerHeadContainer" id="outerHeadContainer">
@@ -59,7 +63,7 @@ function Header() {
         </div>
         <ul className="leftMenu">
           <li>Home</li>
-          <li>Tv Shows</li>
+          <li>Tv</li>
           <li>Movies</li>
           <li>Latest</li>
           <li>MyList</li>
@@ -78,8 +82,9 @@ function Header() {
             <ArrowDropDownIcon />
           </li>
         </ul>
-        <div className="menu-toggle">
-          <MenuIcon />
+        <div className="menu-toggle" onClick={handleMenuToggle}>
+          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}{" "}
+          {/* Toggle between Menu and Close icons */}
         </div>
         <ul className="dropdown-menu">
           <li>Home</li>
